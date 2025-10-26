@@ -1,0 +1,18 @@
+[project]
+name = "65ep2405"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "django>=5.2.7",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=25.2",
+    "djangorestframework>=3.16.1",
+    "djangorestframework-simplejwt>=5.5.1",
+    "faker>=37.12.0",
+    "python-decouple>=3.8",
+]
