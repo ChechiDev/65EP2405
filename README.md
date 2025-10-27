@@ -15,9 +15,10 @@ Implementa **str**() y un método polimórfico, por ejemplo: - calcular_descuent
 Registra el modelo en el admin con list_display y list_filter.
 
 Crea relaciones:
-    - 1 a 1 (ej. User ↔ ProfileUser)
-    - 1 a N
-    - N a M si el esquema lo requiere.
+
+- 1 a 1 (ej. User ↔ ProfileUser)
+- 1 a N
+- N a M si el esquema lo requiere.
 
 ### 2. Vistas basadas en función
 
@@ -32,11 +33,12 @@ Demuestra polimorfismo en la presentación (misma lógica para diferentes datos 
 ### 3. Vistas basadas en clase
 
 Implementa un CRUD completo usando Class-Based Views (CBV):
-    - ListView,
-    - DetailView,
-    - CreateView,
-    - UpdateView,
-    - DeleteView.
+
+- ListView,
+- DetailView,
+- CreateView,
+- UpdateView,
+- DeleteView.
 
 Aplica herencia entre vistas, creando una clase base (BaseView) con configuraciones comunes.
 
@@ -59,9 +61,10 @@ Asegúrate de mantener coherencia POO en la organización de vistas y archivos.
 ### 5. Autenticación y permisos
 
 Configura el sistema de autenticación de Django:
-    - Registro (signup)
-    - Login (login)
-    - Logout (logout)
+
+- Registro (signup)
+- Login (login)
+- Logout (logout)
 
 Protege vistas CRUD con @login_required o LoginRequiredMixin.
 
@@ -74,9 +77,10 @@ Muestra el usuario autenticado en el encabezado del sitio.
 Crea un ModelForm o formulario manual en forms.py.
 
 Añade validaciones personalizadas, por ejemplo:
-    - precio > 0
-    - stock >= 0
-    - salario >= 1000
+
+- precio > 0
+- stock >= 0
+- salario >= 1000
 
 Aplica encapsulamiento: controla el acceso o modificación de los datos del formulario.
 
@@ -85,18 +89,20 @@ Muestra errores y mensajes de éxito visualmente en la plantilla.
 ### 7. API REST (1.5 puntos)
 
 Crea una API usando Django REST Framework (DRF):
-    - Endpoint /api/[modelo]/ con métodos GET y POST.
-    - Implementa ModelSerializer.
-    - Añade filtros (DjangoFilterBackend), búsqueda (SearchFilter) y ordenación (OrderingFilter).
+
+- Endpoint /api/[modelo]/ con métodos GET y POST.
+- Implementa ModelSerializer.
+- Añade filtros (DjangoFilterBackend), búsqueda (SearchFilter) y ordenación (OrderingFilter).
 
 Usa herencia de clases DRF (ListCreateAPIView, RetrieveUpdateDestroyAPIView).
 
 ### 8. Panel de administración
 
 Personaliza el panel de administración:
-    - Columnas (list_display)
-    - Filtros (list_filter)
-    - Búsqueda (search_fields)
+
+- Columnas (list_display)
+- Filtros (list_filter)
+- Búsqueda (search_fields)
 
 Si hay más de un modelo, aplica herencia o reutilización para mantener el mismo formato de administración.
 
