@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from decimal import Decimal, InvalidOperation
 
 
 class BaseEntidad(models.Model):
@@ -202,9 +203,9 @@ class Libro(BaseEntidad):
     @precio.setter
     def precio(self, value):
         try:
-            v = float(value)
-        except (TypeError, ValueError):
-            raise ValueError("El precio debe ser numérico.")
+            v = Decimal(str(value))
+        except (InvalidOperation, TypeError, ValueError):
+            raise ValueError("El precio debe ser numérico (Decimal).")
 
         if v < 0:
             raise ValueError("El precio no puede ser negativo.")
