@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Listado de Libros{% endblock %}
+
+{% block content %}
+<h2>Listado de libros</h2>
+
+<form method="get">
+    <label>Género:</label>
+    <input type="text" name="genero" value="{{ request.GET.genero }}">
+    <label>Precio mínimo:</label>
+    <input type="number" name="min" step="0.01" value="{{ request.GET.min }}">
+    <label>Precio máximo:</label>
+    <input type="number" name="max" step="0.01" value="{{ request.GET.max }}">
+    <button type="submit">Filtrar</button>
+</form>
+
+<ul>
+{% for libro in libros %}
+    <li>
+        <strong>{{ libro.titulo }}</strong> — {{ libro.genero }} — {{ libro.precio }}€
+    </li>
+{% empty %}
+    <p>No hay libros que coincidan con los filtros.</p>
+{% endfor %}
+</ul>
+{% endblock %}
